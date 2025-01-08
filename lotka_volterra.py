@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt 
+import numpy
+import pandas as pd
 
 time = [0]
 lapins = [1]
@@ -8,6 +10,7 @@ alpha = 1/3
 beta = 1/3
 delta = 1/3
 gamma = 1/3
+
 step = 0.001
 
 
@@ -18,6 +21,12 @@ for indice in range (1, 1000):
     time.append(new_time)
     lapins.append(new_lapin)
     renards.append(new_renard)
+
+lapins = numpy.array(lapins)
+lapins *= 1000
+
+renards = numpy.array(renards)
+renards *=1000
 
 
 plt.figure(figsize=(10,6))

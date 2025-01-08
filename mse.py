@@ -9,5 +9,7 @@ def mse(list_predite, list_reel):
     mse = np.mean((list_predite - list_reel)**2)
     return mse
 
+'''
 print("MSE Lapins", mse(lotka_volterra.lapins,lapins_renards.lapins_reel))
 print("MSE Renards",mse(lotka_volterra.renards,lapins_renards.renards_reel))
+'''

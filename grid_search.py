@@ -19,8 +19,9 @@ def grid_search(param_grid):
             for delta in param_grid['delta']:
                 for gamma in param_grid['gamma']:
                     params = {'alpha': alpha, 'beta': beta, 'delta': delta, 'gamma': gamma}
-                    lapins_predits = lotka_volterra.lapins
-                    renards_predits = lotka_volterra.renards
+                    lapins_predits , renards_predits = lotka_volterra.predictions(alpha, beta, delta, gamma)
+                    lapins_predits = lapins_predits[:1000]
+                    renards_predits = renards_predits[:1000]
                     lapins_reels = lapins_renards.lapins_reel
                     renards_reels = lapins_renards.renards_reel
                     

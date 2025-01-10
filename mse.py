@@ -7,7 +7,7 @@ def mse(list_predite, list_reel):
     list_predite *= 1000
     list_reel = np.array(list_reel)
 
-    mse = np.mean((list_predite - list_reel)**2)
+    mse = np.mean((list_predite - list_reel)**2)/len(list_reel)
     return mse
 
 
